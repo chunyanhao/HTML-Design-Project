@@ -2,6 +2,7 @@
 <html lang = 'en'>
   <head>
     <meta charset = 'UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name ='author' content = 'Bella Hao'>
     <meta name = 'description' content = "This is the page content">
 
@@ -9,81 +10,60 @@
 
     <link rel = "icon" href = "img/Bella.png" type = "image/x-icon">
     <link rel = "stylesheet" href = "main.css" type = "text/css">
+    <script src = 'js/main.js' defer></script>
   </head>
 
   <body>
-  <header>
-    <h1> Welcome to Bella's Pancake House !</h1>
-    <p>Hope you enjoy our taste here !</p>
-    <nav aria-label = 'primary-navigation'>
-      <ul>
-        <li> <a href="#About">About</a>  </li>
+  <header class= "header">
+    <h1 class = 'header__h1'> <span class = 'nowrap'> Bella's Pancake House </span></h1>
+    
+    <nav aria-label = 'primary-navigation' class = 'header__nav'>
+      <ul class = 'header__ul'>
+        
         <li> <a href="#Menu">Menu</a>  </li>
-        <li> <a href="hours.html">Address & Hours</a>  </li>
-        <li> <a href="Contact.html">Contact Us</a>   </li>
+        <li> <a href="hours.html"> Hours</a>  </li>
+        <li> <a href="Contact.html">Address & Contact</a>   </li>
+        <li> <a href="about.html">About</a>  </li>
+
       </ul>
     </nav>
-
-    <figure>
-        <img src="img/p2.jpeg" alt="product_1" title = "product_1">
-        <figcaption>
-            Enjoy your vegetable pancake here!
-        </figcaption>
-    </figure>
   </header>
-  <hr>
-  <main>
-    <h2>About</h2>
-    <p>🥕🥬🧅🥕🥬🧅🥕🥬🧅</p>
-   <article id = 'About'>
-    <p>Bella's Pancake House was found in 2022. Our shop was build to provide traditional Chinese vegetable pancakes for our local customers. 
-        We hope our shop adds a unique and interesting place to our little town.</p>
-    <br>
-    <aside>
-        <details>
-          <summary>History of Chinese Vegetable Pancakes</summary>
-          <p>Vegetable pancake which is called <abbr title = 'pronunciation like Cai_Jian_Bing'>"菜煎饼"</abbr> is a popular food in the Lunan region of Shandong Province, China,
-             made of flour, grains, eggs, etc. </p> 
-          <p>It is popular in Zaozhuang, Jining, Linyi, and other places in southern Shandong Province. 
-             And later spread to surrounding provinces and cities.
-             (Source: <cite><a href="https://baike.baidu.com/item/%E8%8F%9C%E7%85%8E%E9%A5%BC/2960937" target = '_blank'>Baidu Baike</a></cite>)
-            </p>
-          <p>Let's enjoy a traditional way of making chinese vegetable pancake by 
-            clicking <em><a href = 'https://www.youtube.com/watch?v=uWH-Bn3H8Qo&t=203s' target = '_blank'>here</a></em></p>
-          <figure>
-            <img src="img/shandong.jpg" alt="shandong" title = "shandong" width = '400'>
-            <figcaption>
-              Map of Shandong Province, China
-            </figcaption>
-          </figure>
-        </details>
-      </aside>
-   </article>
+
+  <section class = 'hero'>
+    <h2 class = 'hero__h2'>Welcome !</h2>
+    <figure>
+      <img src="img/p6.png" alt="product_1" title = "product_1" width = '800'>
+      <figcaption class = 'offscreen'>   <!-- not viewable but readable -->
+          Enjoy your vegetable pancake here!
+      </figcaption>
+    </figure>
+    
+  </section>
+
+  <main class = 'main'>
+    
     <hr>
     <h2>Menu</h2>
-    <article id = 'Menu'>
-    <p> We can make <strong>specialized</strong> vegetable pancake for <em>your own preference</em>!</p>
-    <p> Step 1 : choose pancake ingredients<p>
-    <p> Step 2 : choose extra add-ins<p>
-    <p> Step 3 : choose drinks<p>
+    <article id = 'menu' class = 'main__article menu'>
+    <p class = 'menu__p'> We can make <strong>specialized</strong> vegetable pancake for <em>your own preference </em>!</p>
 
-    <form action="http://httpbin.org/get" method = "get">
-        <fieldset>
-            <legend>Step 1 &lt;ingredients&gt;</legend>
+    <form action="http://httpbin.org/get" method = "get" class = 'menu__form'>
+        <fieldset class = 'menu__fieldset'>
+            <legend class = 'menu__legend'>Step 1 &lt;ingredients&gt;</legend>
 
-            <p>
+            <section class ='menu__select'>
             <p>$ 1</p>
             <input type="checkbox" name = 'carrot' id = 'carrot' value = 'carrot'>
             <label for="carrot">carrot</label>
             <input type="checkbox" name = 'potato' id = 'potato' value = 'potato'>
             <label for="potato">potato</label>
-            <input type="checkbox" name = 'green_pepper' id = 'green_pepper' value = 'green_pepper'>
-            <label for="green_pepper">green pepper</label>
+            <input type="checkbox" name = 'pepper' id = 'pepper' value = 'pepper'>
+            <label for="green_pepper">pepper</label>
             <input type="checkbox" name = 'onion' id = 'onion' value = 'onion'>
             <label for="onion">onion</label>
-            </p>
+            </section>
+            <section class ='menu__select'>
             <p>$ 1.5</p>
-            <p>
             <input type="checkbox" name = 'pumpkin' id = 'pumpkin' value = 'pumpkin'>
             <label for="pumpkin">pumpkin</label>
             <input type="checkbox" name = 'napa' id = 'napa' value = 'napa'>
@@ -92,9 +72,9 @@
             <label for="eggplant">eggplant</label>
             <input type="checkbox" name = 'vermicelli' id = 'vermicelli' value = 'vermicelli'>
             <label for="vermicelli">vermicelli</label>
-            </p>
+             </section>
+            <section class ='menu__select'>
             <p>$2</p>
-            <p>
             <input type="checkbox" name = 'extra_egg' id = 'extra_egg' value = 'extra_egg'>
             <label for="extra_egg">extra egg</label>
             <input type="checkbox" name = 'ham' id = 'ham' value = 'ham'>
@@ -103,32 +83,41 @@
             <label for="shrimp">shrimp</label>
             <input type="checkbox" name = 'beef_slice' id = 'beef_slice' value = 'beef_slice'>
             <label for="beef_slice">beef slice</label>
+            </section>
             
-            </p>
         </fieldset>
-        <fieldset>
-            <legend>Step 2 &lt;extra add-ins&gt;</legend>
-            <p>$2</p>
-            <p>
+        <fieldset class = 'menu__fieldset'>
+            <legend class = 'menu__legend'>Step 2 &lt;extra add-ins&gt;</legend>
+            <section>
+            <p >$2</p>
                 <input type="radio" name = 'field' id = 'stick' value = 'option_1'>
-                <label for="option_1">deep-fried dough stick</label>
-              </p>
-              <p>
+                <label for="option_1">deep-fried dough stick &nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="radio" name = 'field' id = 'stick' value = 'option_2'>
                 <label for="option_2">deep-fried crispy piece</label>
-              </p>
+            <br>    
+            <p>$0</p>
+                <input type="radio" name = 'spicy' id = 'spicy' value = 'spicy_1'>
+                <label for="spicy_1">🌶 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+             
+                <input type="radio" name = 'spicy' id = 'spicy' value = 'spicy_2'>
+                <label for="spicy_2">🌶🌶 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+             
+                <input type="radio" name = 'spicy' id = 'spicy' value = 'spicy_2'>
+                <label for="spicy_2">🌶🌶🌶 </label>
+            
         </fieldset>
-        <fieldset>
-            <legend>Step 3 &lt;Drinks&gt;</legend>
+        <fieldset class = 'menu__fieldset'>
+            <legend class = 'menu__legend'>Step 3 &lt;Drinks&gt;</legend>
             <p>$2 each, 3 choices maximum</p>
-            <select name = 'language' id = 'language' multiple size = '3'>
-                <optgroup label = 'Soft Drink'>
+            <br>
+            <select name = 'language' id = 'language' multiple size = '3' class = 'menu__select menu__drink'>
+                <optgroup label = 'Soft Drink' class = 'menu_drink'>
                 <option value="Coca_Cola">Coca Cola</option>
                 <option value="Dr_Pepper">Dr. Pepper</option>
                 <option value="Fanta">Fanta </option>
                 <option value="Pepsi">Pepsi</option>
                 </optgroup>
-                <optgroup  label = 'Milk'>
+                <optgroup  label = 'Milk' class = 'menu_drink'>
                     <option value="Chocolate_Milk">Chocolate Milk</option>
                     <option value="Home Made SoyMilk">Home Made SoyMilk</option>
                     <option value="Home Made Rice Milk">Home Made Rice Milk</option>
@@ -136,16 +125,18 @@
             </select>
         </fieldset>
         <br>
-        <button type = 'submit'>Submit</button>
-        <button type = 'reset'>Reset</button>
+        <button class = 'menu__button' type = 'submit'>Submit</button>
+        <button class = 'menu__button' type = 'reset'>Reset</button>
     </form>
-    <p><a href="#">Back to Top</a></p>
+    <p class = 'center'><a href="#">Back to Top</a></p>
   </article>
 </main>
 <hr>
-<footer>
+<footer class = 'footer'>
 <p>
-    &lt;&lt;&lt; &copy; <a href = 'Contact.html'>Story about us</a> &gt;&gt;&gt;
+    &lt;&lt;&lt; &copy; <time id = 'year'></time>
+    <a href = 'Contact.html'><span class = 'nowrap'>Bella's Pancake House</span> </a> 
+    &gt;&gt;&gt;
 </p>
 </footer>
 

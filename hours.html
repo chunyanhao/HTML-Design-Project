@@ -2,6 +2,7 @@
 <html lang = 'en'>
   <head>
     <meta charset = 'UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name ='author' content = 'Bella Hao'>
     <meta name = 'description' content = "hours_and_address">
 
@@ -9,101 +10,96 @@
 
     <link rel = "icon" href = "img/Bella.jpeg" type = "image/x-icon">
     <link rel = "stylesheet" href = "main.css" type = "text/css">
+    <script src = 'js/main.js' defer></script>
   </head>
 
   <body>
-  <header>
-    <h1> Our Hours and Addresses</h1>
-      <ul>
-        <li> <a href="/">HomePage</a>  </li>
-        <li> <a href="/#About">About</a>  </li>
+  <header class = 'header'>
+    <h1 class = 'header__h1'> <span class = 'nowrap'> Bella's Pancake House </span></h1>
+    <nav class = 'header__nav'>
+      <ul class = 'header__ul'>
+        <li> <a href="/">Home</a>  </li>
         <li> <a href="/#Menu">Menu</a>  </li>
-        <li> <a href="Contact.html">Contact us</a>   </li>
-        
+        <li> <a href="Contact.html">Address & Contact</a>   </li>
+        <li> <a href="about.html">About</a>  </li>
       </ul>
-
-    <figure>
-        <img src="img/open.jpeg" alt="open" title = "open">
-        <figcaption>
-
-        </figcaption>
-    </figure>
+    </nav>
   </header>
 
-  <main>
-    <table>
-        <caption>Daily Open Hours</caption>
+  <section class = 'hero'>
+    <figure>
+      <img src="img/open.png" alt="open" title = "open" width = '800'>
+      <figcaption class = 'offscreen' >
+
+      </figcaption>
+  </figure>
+  </section>
+
+  <main class = 'main'>
+    <h2>Our Open Hours</h2>
+    <article id = 'hours' class = 'main__article open_hours'>
+    <table  class = 'open_hours__container'>
+        <caption class = 'offscreen' >Daily Open Hours</caption>
         <thead>
             <tr>
-                <th>&nbsp;</th>
-                <th>Day</th>
-                <th colspan="2">Open--Close</th>
+                <th class = 'open_hours__header' >&nbsp;</th>
+                <th class = 'open_hours__header'>Day</th>
+                <th class = 'open_hours__header' >Open</th>
+                <th class = 'open_hours__header' >Close</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="5">Weekdays</th>
-                <td >Monday</td><td colspan = '2'>Close</td>
+                <th class = 'open_hours__item open_hours__weekdays' scope = 'row' rowspan="5">Weekdays</th>
+                <td class="open_hours__item" >Monday</td>
+                <td class="open_hours__item open_hours__merge" colspan="2">Close</td>
             </tr>
             <tr>
-                <td>Tuesday</td><td>7:30</td><td>14:30</td>
+                <td class="open_hours__item">Tuesday</td>
+                <td class="open_hours__item">7:30</td>
+                <td class="open_hours__item">14:30</td>
             </tr>
             <tr>
-                <td>Wednesday</td><td>7:30</td><td>14:30</td>
+                <td class="open_hours__item">Wednesday</td>
+                <td class="open_hours__item">7:30</td>
+                <td class="open_hours__item">14:30</td>
             </tr>
             <tr>
-                <td>Thursday</td><td>7:30</th><td>14:30</td>
+                <td class="open_hours__item">Thursday</td>
+                <td class="open_hours__item">7:30</td>
+                <td class="open_hours__item">14:30</td>
             </tr>
             <tr>
-                <td>Friday</td><td>7:30</td><td>14:30</td>
+                <td class="open_hours__item">Friday</td>
+                <td class="open_hours__item">7:30</td>
+                <td class="open_hours__item">14:30</td>
             </tr>
             <tr>
-                <th rowspan="2">Weekends</td>
-                <td>Saturday</td><td>7:30</td><td>14:30</td>
+                <th class = 'open_hours__item open_hours__weekends' scope = 'row' rowspan="2">Weekends</th>
+                <td class="open_hours__item">Saturday</td>
+                <td class="open_hours__item">7:30</td>
+                <td class="open_hours__item">14:30</td>
             </tr>
             <tr>
-                <td>Sunday</td><td>7:30</td><td>14:30</td>
+                <td class="open_hours__item">Sunday</td>
+                <td class="open_hours__item">7:30</td>
+                <td class="open_hours__item">14:30</td>
             </tr>
         </tbody>
     </table>
-    <article id = 'address'>
-        <h3> We have 3 stores in Seattle!</h3>
-        
-        <dl>
-          <dt>*** Seattle ***</dt>
-          <dd>
-            <address>
-            <p>2025 1st Ave #500 </p> 
-            <p>Seattle, WA 98121 </p>
-            <p><a href="tel:+1(555)-555-5555">Tel: 555-555-55555</a>  </p>
-            </address>
-         </dd>
-    
-          <dt>*** Bellevue ***</dt>
-          <dd>
-            <address>
-                <p>500 Bellevue Way NE Suite 210 </p> 
-                <p>Bellevue, WA 98004 </p>
-                <p><a href="tel:+1(555)-555-5555">Tel: 555-555-55555</a>  </p>
-            </address>
-          </dd>
-    
-          <dt>*** Lynnwood ***</dt>
-          <dd>
-            <address>
-          <p>3200 184th St SW</p> 
-          <p>Lynnwood, WA 98037</p>
-          <p><a href="tel:+1(555)-555-5555">Tel: 555-555-55555</a>  </p>
-            </address>
-          </dd>
-        </dl>
+    <p class = 'center'>
+      <a href="#">Back to Top</a>
+    </p>
+
     </article>
-    <p><a href="#">Back to Top</a></p>
+   
   </main>
   <hr>
-    <footer>
+    <footer class = 'footer'>
     <p>
-        &lt;&lt;&lt; &copy; <a href = 'Contact.html'>Story about us</a> &gt;&gt;&gt;
+         &lt;&lt;&lt; &copy; <time id = 'year'></time>
+        <a href = 'Contact.html'><span class = 'nowrap'>Bella's Pancake House</span> </a> 
+        &gt;&gt;&gt;
     </p>
     </footer>
    </body>
