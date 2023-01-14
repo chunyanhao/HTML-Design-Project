@@ -22,7 +22,7 @@ input, button, textarea{
   /* || Fonts */
   --FF: 'Nunito', sans-serif;   /* 'font-family' */
   --FF-headings: 'Fugaz One', cursive;
-  --FS: clamp(1.2rem, 2.2vh, 1.1rem) ;     /* 'font-size'   min ideal max */
+  --FS: clamp(1rem, 2.2vh, 1.1rem) ;     /* 'font-size'   min ideal max */
 
   /* || Colors */
   --background-color: orange;
